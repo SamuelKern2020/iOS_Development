@@ -9,14 +9,28 @@
 import Foundation
 
 class CalculatorBrain{
-    private enum Op {
+    private enum Op: Printable
+    {
         case Operand(Double)
         case UnaryOperation(String, Double -> Double)
         case BinaryOperation (String, (Double, Double) ->Double)
+        
+        var description: String {
+            get{
+                switch self {
+                case .Operand(let operand):
+                    return "\(operand)"
+                case .UnaryOperation(let symbol, _):
+                    return symbol
+                case .BinaryOperation(let symbol, _):
+                    return symbol
+                    
+                }
+            }
+        }
     }
     
     private var opStack = [Op]() //Stack containing Op enums
-    
     
     private var knownOps = [String: Op]() //A dictionary containing all known operations. Init creates new instances of Op enums
     
@@ -27,24 +41,32 @@ class CalculatorBrain{
         knownOps["/"] = Op.BinaryOperation("/") {$1 / $0}
     }
     
-    func pushOperand (number: Double){ //Add a -> Double once evaluate() is created
+    func pushOperand (number: Double) -> Double? { //Evaluates the stack every time a operand is pushed
         opStack.append(Op.Operand(number))
-        //will add a return evaluate() once completed
+        return evaluate()
     }
     
-    func performOperation (symbol: String) {
+    func pushOperation (symbol: String){
         if let newOperation = knownOps[symbol]{
             opStack.append(newOperation)
         }
     }
+    func performOperation (symbol: String) -> Double? {
+        if let newOperation = knownOps[symbol]{
+            opStack.append(newOperation)
+        }
+        return evaluate()
+    }
     
     
     func evaluate() -> Double? {    //Return type is an optional because a user could only have operations on the stack and then call evaluate. We need to be able to return nil, hence the optional.
-        
+        let (result, remainder) = evaluate(opStack)
+        println("\(opStack) = \(result) with \(remainder) left over")
+        return result
     }
     
    
-    func evaluate(ops: [Op]) -> (result: Double?, remaining: [Op]) {//There is an implicit "let" in front of the arguement "ops", making it immutable.
+    private func evaluate(ops: [Op]) -> (result: Double?, remainingOps: [Op]) {//There is an implicit "let" in front of the arguement "ops", making it immutable.
         
         if !ops.isEmpty {
             var remainingOps = ops  //Copying immutable array "ops" into a mutable array "remainingOps" using var
@@ -54,30 +76,22 @@ class CalculatorBrain{
                 return (operand, remainingOps)
             case .UnaryOperation(_, let operation):
                 let operandEvaluation = evaluate(remainingOps)
-                if let thisOperand = operandEvaluation.result{
-                    return (operation(thisOperand), operandEvaluation.remainingOps)
+                if  let operand = operandEvaluation.result{
+                    return (operation(operand), operandEvaluation.remainingOps)
                 }
             case .BinaryOperation(_, let operation):
                 let operand1Evaluation = evaluate(remainingOps)
                 if let operand1 = operand1Evaluation.result{
                     let operand2Evaluation = evaluate(operand1Evaluation.remainingOps)
                     if let operand2 = operand2Evaluation.result{
-                        return (operatioin(operand1, operand2), operand2Evaluation.remainingOps)
+                        return (operation(operand1, operand2), operand2Evaluation.remainingOps)
                     }
-                    
                 }
-
-                
             }
-    
-            
-            
         }
         
+        
         return (nil, ops)
-        
-        
-        
         
     }
     
