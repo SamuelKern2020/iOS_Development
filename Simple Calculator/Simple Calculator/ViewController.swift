@@ -30,31 +30,53 @@ class ViewController: UIViewController {
         }
     }
     
+
+    var holdingOperation = ""
+    
     
     @IBAction func operate(sender: UIButton) {
-        let operation = sender.currentTitle!
         if userIsInTheMiddleOfTypingANumber{
-            enter()
+            pushToStack()//Pushes the display value to the stack
         }
-        if let operation = sender.currentTitle{
+        println("holdingOperation: \(holdingOperation)")
+        let symbol = sender.currentTitle!
+        
+        if  holdingOperation.isEmpty{//If there is no symbol
+            holdingOperation = symbol
+            println("holdingOperation is now \(holdingOperation)")
+
+        }
+        else {
+            println("holdingOperation: Not Empty. Value: \(holdingOperation)")
+            let operation = holdingOperation
             if let result = brain.performOperation(operation){
                 displayValue = result
             }
+                
             else {
                 displayValue = 0
-
             }
-                    }
+            
+            if symbol != "=" {//User selected an operation
+                println("holdingOperation: \(holdingOperation)")
+                holdingOperation = symbol
+            }
+            else {//User selected "=" button
+                holdingOperation = ""   //There is no longer a holding operation
+            }
+            
+        }
+        
         
     }
     
     
-    func enter() {
+    func pushToStack() {
         userIsInTheMiddleOfTypingANumber = false
-        brain.pushOperand(displayValue)
-        if let result = brain.pushOperand(displayValue){
-            displayValue = result
-        }
+        brain.pushOperand(displayValue);
+//        if let result = brain.pushOperand(displayValue){
+//            displayValue = result
+//        }
 
     }
     

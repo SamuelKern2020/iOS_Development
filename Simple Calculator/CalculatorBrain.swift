@@ -41,10 +41,17 @@ class CalculatorBrain{
         knownOps["/"] = Op.BinaryOperation("/") {$1 / $0}
     }
     
-    func pushOperand (number: Double) -> Double? { //Evaluates the stack every time a operand is pushed
-        opStack.append(Op.Operand(number))
-        return evaluate()
-    }
+//    func pushOperand (number: Double) -> Double? { //Evaluates the stack every time a operand is pushed
+//        opStack.append(Op.Operand(number))
+//        return evaluate()
+//    }
+    
+        func pushOperand (number: Double) { //creates an operand enum and pushes it to the stack
+            println("opStack: \(opStack)")
+            opStack.append(Op.Operand(number))
+            println("opStack: \(opStack)")
+        }
+
     
     func pushOperation (symbol: String){
         if let newOperation = knownOps[symbol]{
