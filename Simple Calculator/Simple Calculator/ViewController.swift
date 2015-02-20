@@ -94,6 +94,7 @@ class ViewController: UIViewController {
     
     @IBAction func clear() {
         display.text = "0"
+        holdingOperation = ""
         userIsInTheMiddleOfTypingANumber = false
     }
 

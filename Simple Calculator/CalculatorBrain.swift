@@ -39,6 +39,7 @@ class CalculatorBrain{
         knownOps["-"] = Op.BinaryOperation("-") {$1 - $0}
         knownOps["*"] = Op.BinaryOperation("*", *)
         knownOps["/"] = Op.BinaryOperation("/") {$1 / $0}
+        knownOps["s"] = Op.UnaryOperation("s", sqrt)
     }
     
 //    func pushOperand (number: Double) -> Double? { //Evaluates the stack every time a operand is pushed
@@ -46,23 +47,26 @@ class CalculatorBrain{
 //        return evaluate()
 //    }
     
-        func pushOperand (number: Double) { //creates an operand enum and pushes it to the stack
+    //Pushes operand, doesn't evaluate.
+    func pushOperand (number: Double) { //creates an operand enum and pushes it to the stack
             println("opStack: \(opStack)")
             opStack.append(Op.Operand(number))
             println("opStack: \(opStack)")
         }
 
-    
-    func pushOperation (symbol: String){
-        if let newOperation = knownOps[symbol]{
-            opStack.append(newOperation)
-        }
-    }
+    //Pushes operation to stack and evaluates
     func performOperation (symbol: String) -> Double? {
         if let newOperation = knownOps[symbol]{
             opStack.append(newOperation)
         }
         return evaluate()
+    }
+    
+    //Same function as performOperation above, but doesn't calculate each time a operation is pushed:
+    func pushOperation (symbol: String){
+        if let newOperation = knownOps[symbol]{
+            opStack.append(newOperation)
+        }
     }
     
     
