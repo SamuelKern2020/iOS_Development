@@ -44,48 +44,21 @@ class IdeaTableViewController: UITableViewController {
         
             var nextView = segue.destinationViewController as IdeaDetailViewController
             nextView.idea = newIdea
-
-            
         }
-        
-        
     }
     
-    override func viewWillAppear(animated: Bool) {
+    
+    override func viewWillAppear(animated: Bool) {  //Reloads data each time view is re-displayed
         tableView.reloadData()
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // Override to support editing the table view.
+ 
+    //Deleting an Idea:
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        //Deletion code:
+        ideasInTable.removeAtIndex(indexPath.row)   //Removes selected Idea from ideasInTable array
         
-        
-        //
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)  //Then delete the cell from the table view
     }
     
     
