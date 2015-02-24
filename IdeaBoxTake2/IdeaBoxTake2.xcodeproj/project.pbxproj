@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EB7175E1A9BC960003CF604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7175D1A9BC960003CF604 /* AppDelegate.swift */; };
+		7EB717631A9BC960003CF604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB717611A9BC960003CF604 /* Main.storyboard */; };
+		7EB717651A9BC960003CF604 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EB717641A9BC960003CF604 /* Images.xcassets */; };
+		7EB717681A9BC960003CF604 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EB717661A9BC960003CF604 /* LaunchScreen.xib */; };
+		7EB717741A9BC960003CF604 /* IdeaBoxTake2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB717731A9BC960003CF604 /* IdeaBoxTake2Tests.swift */; };
+		7EB7177E1A9BC9BE003CF604 /* IdeaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7177D1A9BC9BE003CF604 /* IdeaTableViewController.swift */; };
+		7EB717801A9BCC3F003CF604 /* IdeaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7177F1A9BCC3F003CF604 /* IdeaDetailViewController.swift */; };
+		7EB717821A9BCD1A003CF604 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB717811A9BCD1A003CF604 /* Idea.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7EB7176E1A9BC960003CF604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7EB717501A9BC960003CF604 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EB717571A9BC960003CF604;
+			remoteInfo = IdeaBoxTake2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7EB717581A9BC960003CF604 /* IdeaBoxTake2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaBoxTake2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB7175C1A9BC960003CF604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EB7175D1A9BC960003CF604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7EB717621A9BC960003CF604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7EB717641A9BC960003CF604 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7EB717671A9BC960003CF604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		7EB7176D1A9BC960003CF604 /* IdeaBoxTake2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdeaBoxTake2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB717721A9BC960003CF604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EB717731A9BC960003CF604 /* IdeaBoxTake2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBoxTake2Tests.swift; sourceTree = "<group>"; };
+		7EB7177D1A9BC9BE003CF604 /* IdeaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaTableViewController.swift; sourceTree = "<group>"; };
+		7EB7177F1A9BCC3F003CF604 /* IdeaDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaDetailViewController.swift; sourceTree = "<group>"; };
+		7EB717811A9BCD1A003CF604 /* Idea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EB717551A9BC960003CF604 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB7176A1A9BC960003CF604 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7EB7174F1A9BC960003CF604 = {
+			isa = PBXGroup;
+			children = (
+				7EB7175A1A9BC960003CF604 /* IdeaBoxTake2 */,
+				7EB717701A9BC960003CF604 /* IdeaBoxTake2Tests */,
+				7EB717591A9BC960003CF604 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EB717591A9BC960003CF604 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EB717581A9BC960003CF604 /* IdeaBoxTake2.app */,
+				7EB7176D1A9BC960003CF604 /* IdeaBoxTake2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7EB7175A1A9BC960003CF604 /* IdeaBoxTake2 */ = {
+			isa = PBXGroup;
+			children = (
+				7EB7175D1A9BC960003CF604 /* AppDelegate.swift */,
+				7EB717611A9BC960003CF604 /* Main.storyboard */,
+				7EB7177F1A9BCC3F003CF604 /* IdeaDetailViewController.swift */,
+				7EB717811A9BCD1A003CF604 /* Idea.swift */,
+				7EB7177D1A9BC9BE003CF604 /* IdeaTableViewController.swift */,
+				7EB717641A9BC960003CF604 /* Images.xcassets */,
+				7EB717661A9BC960003CF604 /* LaunchScreen.xib */,
+				7EB7175B1A9BC960003CF604 /* Supporting Files */,
+			);
+			path = IdeaBoxTake2;
+			sourceTree = "<group>";
+		};
+		7EB7175B1A9BC960003CF604 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EB7175C1A9BC960003CF604 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EB717701A9BC960003CF604 /* IdeaBoxTake2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7EB717731A9BC960003CF604 /* IdeaBoxTake2Tests.swift */,
+				7EB717711A9BC960003CF604 /* Supporting Files */,
+			);
+			path = IdeaBoxTake2Tests;
+			sourceTree = "<group>";
+		};
+		7EB717711A9BC960003CF604 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7EB717721A9BC960003CF604 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EB717571A9BC960003CF604 /* IdeaBoxTake2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EB717771A9BC960003CF604 /* Build configuration list for PBXNativeTarget "IdeaBoxTake2" */;
+			buildPhases = (
+				7EB717541A9BC960003CF604 /* Sources */,
+				7EB717551A9BC960003CF604 /* Frameworks */,
+				7EB717561A9BC960003CF604 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IdeaBoxTake2;
+			productName = IdeaBoxTake2;
+			productReference = 7EB717581A9BC960003CF604 /* IdeaBoxTake2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7EB7176C1A9BC960003CF604 /* IdeaBoxTake2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EB7177A1A9BC960003CF604 /* Build configuration list for PBXNativeTarget "IdeaBoxTake2Tests" */;
+			buildPhases = (
+				7EB717691A9BC960003CF604 /* Sources */,
+				7EB7176A1A9BC960003CF604 /* Frameworks */,
+				7EB7176B1A9BC960003CF604 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7EB7176F1A9BC960003CF604 /* PBXTargetDependency */,
+			);
+			name = IdeaBoxTake2Tests;
+			productName = IdeaBoxTake2Tests;
+			productReference = 7EB7176D1A9BC960003CF604 /* IdeaBoxTake2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7EB717501A9BC960003CF604 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Samuel Kern";
+				TargetAttributes = {
+					7EB717571A9BC960003CF604 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					7EB7176C1A9BC960003CF604 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 7EB717571A9BC960003CF604;
+					};
+				};
+			};
+			buildConfigurationList = 7EB717531A9BC960003CF604 /* Build configuration list for PBXProject "IdeaBoxTake2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7EB7174F1A9BC960003CF604;
+			productRefGroup = 7EB717591A9BC960003CF604 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EB717571A9BC960003CF604 /* IdeaBoxTake2 */,
+				7EB7176C1A9BC960003CF604 /* IdeaBoxTake2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7EB717561A9BC960003CF604 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB717631A9BC960003CF604 /* Main.storyboard in Resources */,
+				7EB717681A9BC960003CF604 /* LaunchScreen.xib in Resources */,
+				7EB717651A9BC960003CF604 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB7176B1A9BC960003CF604 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7EB717541A9BC960003CF604 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB717821A9BCD1A003CF604 /* Idea.swift in Sources */,
+				7EB7177E1A9BC9BE003CF604 /* IdeaTableViewController.swift in Sources */,
+				7EB717801A9BCC3F003CF604 /* IdeaDetailViewController.swift in Sources */,
+				7EB7175E1A9BC960003CF604 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7EB717691A9BC960003CF604 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EB717741A9BC960003CF604 /* IdeaBoxTake2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7EB7176F1A9BC960003CF604 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7EB717571A9BC960003CF604 /* IdeaBoxTake2 */;
+			targetProxy = 7EB7176E1A9BC960003CF604 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7EB717611A9BC960003CF604 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EB717621A9BC960003CF604 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7EB717661A9BC960003CF604 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EB717671A9BC960003CF604 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7EB717751A9BC960003CF604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EB717761A9BC960003CF604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7EB717781A9BC960003CF604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IdeaBoxTake2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7EB717791A9BC960003CF604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IdeaBoxTake2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7EB7177B1A9BC960003CF604 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IdeaBoxTake2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdeaBoxTake2.app/IdeaBoxTake2";
+			};
+			name = Debug;
+		};
+		7EB7177C1A9BC960003CF604 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = IdeaBoxTake2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IdeaBoxTake2.app/IdeaBoxTake2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7EB717531A9BC960003CF604 /* Build configuration list for PBXProject "IdeaBoxTake2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB717751A9BC960003CF604 /* Debug */,
+				7EB717761A9BC960003CF604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7EB717771A9BC960003CF604 /* Build configuration list for PBXNativeTarget "IdeaBoxTake2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB717781A9BC960003CF604 /* Debug */,
+				7EB717791A9BC960003CF604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7EB7177A1A9BC960003CF604 /* Build configuration list for PBXNativeTarget "IdeaBoxTake2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EB7177B1A9BC960003CF604 /* Debug */,
+				7EB7177C1A9BC960003CF604 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7EB717501A9BC960003CF604 /* Project object */;
+}

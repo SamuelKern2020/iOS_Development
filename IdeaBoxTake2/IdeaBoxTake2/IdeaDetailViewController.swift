@@ -1,44 +1,34 @@
 //
-//  NoteDetailViewController.swift
-//  NotesPractice3
+//  IdeaDetailViewController.swift
+//  IdeaBoxTake2
 //
-//  Created by Samuel Kern on 2/19/15.
+//  Created by Samuel Kern on 2/23/15.
 //  Copyright (c) 2015 Samuel Kern. All rights reserved.
 //
 
 import UIKit
 
-class NoteDetailViewController: UIViewController {
+class IdeaDetailViewController: UIViewController {
 
     
-    var note = Note()   //New instance of a note
+    var idea = Idea()
     
+    @IBOutlet weak var ideaTitle: UITextField!
     
-    @IBOutlet weak var noteTitle: UITextField!
+    @IBOutlet weak var ideaDescription: UITextView!
     
-    @IBOutlet weak var noteDescription: UITextView!
     
     
     override func viewWillAppear(animated: Bool) {
-        //Do before view loads:
-        noteTitle.text = note.title         //Set title
-        noteDescription.text = note.content   //Set description
+        ideaTitle.text = idea.title
+        ideaDescription.text = idea.description
     }
     
     
     override func viewWillDisappear(animated: Bool) {
-        //Save settings before view changes:
-        note.title = noteTitle.text
-        note.content = noteDescription.text
-        //
+        idea.title = ideaTitle.text
+        idea.description = ideaDescription.text
     }
-    
-    
-    
-    
-    
-    
-    
     
     
     
