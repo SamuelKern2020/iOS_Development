@@ -19,7 +19,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Icy-xh-hhh" kind="show" identifier="Show_Idea" id="1zJ-RR-5TX"/>
+                                    <segue destination="Pp2-QE-Nqq" kind="show" identifier="Show_Idea" id="0Mt-VD-357"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -31,33 +31,82 @@
                     <navigationItem key="navigationItem" title="Idea Box" id="mWP-t8-hB5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="CDv-iY-C6n">
                             <connections>
-                                <segue destination="Icy-xh-hhh" kind="show" identifier="Add_Idea" id="S4K-15-P32"/>
+                                <segue destination="cNg-nt-RBI" kind="presentation" id="pwr-xS-2rW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIL-oA-moe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="246" y="336"/>
+            <point key="canvasLocation" x="74" y="578"/>
         </scene>
-        <!--Idea Detail View Controller-->
-        <scene sceneID="TyH-Hb-MdB">
+        <!--New Idea-->
+        <scene sceneID="btg-5z-Cjy">
             <objects>
-                <viewController id="Icy-xh-hhh" customClass="IdeaDetailViewController" customModule="IdeaBoxTake2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kn9-vM-2hK" customClass="NewIdeaViewController" customModule="IdeaBoxTake2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="i6y-p4-lt8"/>
-                        <viewControllerLayoutGuide type="bottom" id="eL9-vb-DCG"/>
+                        <viewControllerLayoutGuide type="top" id="O1V-tJ-NRd"/>
+                        <viewControllerLayoutGuide type="bottom" id="5S0-VZ-jB1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rea-uZ-ftO">
+                    <view key="view" contentMode="scaleToFill" id="1YP-vz-bBk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IDk-vZ-rH1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JVi-c5-J2z">
                                 <rect key="frame" x="16" y="72" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S9b-cP-pup">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xuM-4v-f9J">
+                                <rect key="frame" x="16" y="110" width="568" height="482"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Idea" id="0Ic-CS-pIE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="OIu-Cm-8yZ">
+                            <connections>
+                                <segue destination="EPm-q7-IaW" kind="unwind" unwindAction="cancelToIdeaTableViewController:" id="teO-4V-98A"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ieE-0S-Qp7">
+                            <connections>
+                                <segue destination="EPm-q7-IaW" kind="unwind" unwindAction="saveNewIdea:" id="ecf-S3-0zR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="newIdeaDescription" destination="xuM-4v-f9J" id="c7b-qo-eGw"/>
+                        <outlet property="newIdeaTitle" destination="JVi-c5-J2z" id="i8c-fN-X5s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbX-8d-8c8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EPm-q7-IaW" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1646" y="214"/>
+        </scene>
+        <!--Idea Detail View Controller-->
+        <scene sceneID="Azt-cb-wCS">
+            <objects>
+                <viewController id="Pp2-QE-Nqq" customClass="IdeaDetailViewController" customModule="IdeaBoxTake2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AQg-28-A4M"/>
+                        <viewControllerLayoutGuide type="bottom" id="3jY-SK-YiO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2zO-VQ-uKD" customClass="IdeaD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Ms-H8-oYq">
+                                <rect key="frame" x="16" y="72" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iu1-83-YZH">
                                 <rect key="frame" x="16" y="110" width="568" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -68,13 +117,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="ideaDescription" destination="S9b-cP-pup" id="Tem-TL-FHv"/>
-                        <outlet property="ideaTitle" destination="IDk-vZ-rH1" id="P3W-hv-ygN"/>
+                        <outlet property="ideaDescription" destination="Iu1-83-YZH" id="ENO-cd-b8p"/>
+                        <outlet property="ideaTitle" destination="4Ms-H8-oYq" id="bMV-v8-bkq"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jKp-ca-KDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzv-4E-uuN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="962" y="336"/>
+            <point key="canvasLocation" x="826" y="926"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qCh-tt-lF1">
@@ -90,10 +139,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="47Y-Hh-nkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-390" y="336"/>
+            <point key="canvasLocation" x="-642" y="354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eRz-WQ-nte">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cNg-nt-RBI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u83-9D-Jin">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kn9-vM-2hK" kind="relationship" relationship="rootViewController" id="68n-ii-dTB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ump-4h-cGe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="834" y="214"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="S4K-15-P32"/>
-    </inferredMetricsTieBreakers>
 </document>

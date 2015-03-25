@@ -12,8 +12,21 @@ class IdeaTableViewController: UITableViewController {
 
     var ideasInTable = [Idea]()
     
-    //Property Functions:
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        var idea1 = Idea()
+        idea1.title = "Idea 1"
+        idea1.description = "Idea 1 description"
+        
+        ideasInTable.extend([idea1])
+    }
+
     
+    
+    
+    //Property Functions:
+    //---------------------------------------------------------
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ideasInTable.count
     }
@@ -27,6 +40,8 @@ class IdeaTableViewController: UITableViewController {
         return cell
     }
     
+    //---------------------------------------------------------
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
@@ -38,54 +53,45 @@ class IdeaTableViewController: UITableViewController {
             nextView.idea = ideasInTable[indexPathToNextView!.row]
             
         }
-        else if segue.identifier == "Add_Idea"{
-            let newIdea = Idea()
-            ideasInTable.append(newIdea)
-        
-            var nextView = segue.destinationViewController as IdeaDetailViewController
-            nextView.idea = newIdea
-
-            
-        }
-        
+//        else if segue.identifier == "Add_Idea"{
+//            let newIdea = Idea()
+//            ideasInTable.append(newIdea)
+//        
+//            var nextView = segue.destinationViewController as IdeaDetailViewController
+//            nextView.idea = newIdea
+//        }
+    }
+    
+    
+    
+    
+    //Defines New Idea functionality:
+    //Unwind segue functions:
+    @IBAction func cancelToIdeaTableViewController(segue:UIStoryboardSegue) {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    @IBAction func saveNewIdea(segue:UIStoryboardSegue) {
+        let newIdea = Idea()
+        newIdea.title = "New Title"
+        newIdea.description = "New Description"
+        ideasInTable.append(newIdea)
+
+    }
+
+    
+    
+    override func viewWillAppear(animated: Bool) {  //Reloads data each time view is re-displayed
         tableView.reloadData()
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // Override to support editing the table view.
+ 
+    //Deleting an Idea:
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        //Deletion code:
+        ideasInTable.removeAtIndex(indexPath.row)   //Removes selected Idea from ideasInTable array
         
-        
-        //
+        tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)  //Then delete the cell from the table view
     }
     
     
